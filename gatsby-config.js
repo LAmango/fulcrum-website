@@ -21,5 +21,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
+    'gatsby-plugin-netlify-cms',
   ],
 }
