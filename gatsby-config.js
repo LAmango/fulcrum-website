@@ -15,7 +15,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/fulcrum_logo_final.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
@@ -32,6 +32,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home`,
+              path: `${__dirname}/cms/`,
       },
     },
     'gatsby-transformer-remark',
