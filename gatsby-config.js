@@ -34,13 +34,6 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `home`,
-              path: `${__dirname}/content/cms/`,
-      },
-    },
     'gatsby-transformer-remark',
   ],
 }
