@@ -23,8 +23,10 @@ const Contact = props => (
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" rows="6"></textarea>
           </div>
-          <input type="submit" value="Send Message" className="special" />
-          <input type="reset" value="Clear" />
+          <button type="submit" className="special">
+            Send Message
+          </button>
+          <button type="reset">Clear</button>
         </form>
       </section>
       <section className="split">
