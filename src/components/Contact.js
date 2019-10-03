@@ -8,7 +8,7 @@ const Contact = props => (
           method="POST"
           action=""
           name="Contact"
-          data-netlify="true"
+          netlify="true"
           netlify-honeypot="bot-field"
         >
           <div className="field half first">
