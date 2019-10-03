@@ -7,7 +7,7 @@ const Contact = props => (
         <form
           method="POST"
           name="Contact"
-          netlify="true"
+          date-netlify="true"
           netlify-honeypot="bot-field"
         >
           <div className="field half first">
@@ -22,6 +22,7 @@ const Contact = props => (
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" rows="6"></textarea>
           </div>
+          <input name="form-name" value="Netlify Rocks" type="hidden" />
           <button type="submit" className="special">
             Send Message
           </button>
