@@ -6,7 +6,6 @@ const Contact = props => (
       <section>
         <form
           method="POST"
-          action=""
           name="Contact"
           netlify="true"
           netlify-honeypot="bot-field"
