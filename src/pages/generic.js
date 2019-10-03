@@ -6,7 +6,9 @@ import { graphql } from 'gatsby'
 import pic11 from '../assets/images/pic11.jpg'
 
 const Generic = props => {
-  console.log(props.data)
+  console.log(props)
+  const { markdownRemark } = props.data
+  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
       <Helmet>
@@ -16,17 +18,15 @@ const Generic = props => {
 
       <div id="main" className="alt">
         <section id="one">
-          {props.data.allMarkdownRemark.edges.map(post => (
-            <div className="inner">
-              <header className="major">
-                <h1>{post.node.frontmatter.title}</h1>
-              </header>
-              <span className="image main">
-                <img src={pic11} alt="" />
-              </span>
-              <p>{post.node.internal.content}</p>
-            </div>
-          ))}
+          <div className="inner">
+            <header className="major">
+              <h1>{frontmatter.title}</h1>
+            </header>
+            <span className="image main">
+              <img src={pic11} alt="" />
+            </span>
+            <p dangerouslySetInnerHTML={{ __html: html }}></p>
+          </div>
         </section>
       </div>
     </Layout>
@@ -35,19 +35,13 @@ const Generic = props => {
 export default Generic
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          internal {
-            content
-          }
-          frontmatter {
-            date
-            description
-            title
-          }
-        }
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        path
+        title
       }
     }
   }

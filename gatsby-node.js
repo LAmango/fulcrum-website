@@ -5,11 +5,10 @@
  */
 
 // You can delete this file if you're not using it
-/*
 const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const blogPostTemplate = path.resolve(`src/pages/generic.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -32,11 +31,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { id, frontmatter, internal } = node
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        id,
+        frontmatter,
+        internal,
+      }, // additional data can be passed via context
     })
   })
 }
-*/
