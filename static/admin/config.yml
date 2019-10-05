@@ -4,6 +4,10 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
+
+editor:
+    preview: false
 
 collections:
   - name: "blog"
@@ -14,6 +18,6 @@ collections:
      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Path", name: "path", default: "{{slug}}", hint: "shoud start with a '/' and something related to the title ex: /content-managment-system" }
+      - { label: "Path", name: "path", default: "{{slug}}", hint: "shoud start with a '/' and something related to the title ex: '/content-managment-system'" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
