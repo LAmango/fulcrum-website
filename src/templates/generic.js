@@ -8,7 +8,7 @@ import pic11 from '../assets/images/pic11.jpg'
 const Generic = props => {
   console.log(props)
   const { markdownRemark } = props.data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, internal } = markdownRemark
   return (
     <Layout>
       <Helmet>
@@ -25,10 +25,7 @@ const Generic = props => {
             <span className="image main">
               <img src={pic11} alt="" />
             </span>
-            <p
-              className="content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            ></p>
+            <p className="content">{internal.content}</p>
           </div>
         </section>
       </div>
@@ -40,11 +37,13 @@ export default Generic
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
         title
+      }
+      internal {
+        content
       }
     }
   }

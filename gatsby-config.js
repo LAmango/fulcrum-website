@@ -1,3 +1,11 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+    enableIdentityWidget: false,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Starter - Forty V2',
@@ -5,6 +13,7 @@ module.exports = {
     description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
   },
   plugins: [
+    netlifyCmsPaths,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -22,18 +31,25 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
     {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        enableIdentityWidget: false,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          netlifyCmsPaths,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
   ],
 }
