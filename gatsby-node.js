@@ -19,6 +19,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              date
+              title
             }
           }
         }
@@ -32,6 +34,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const { id, frontmatter, internal } = node
+
+    var event = new Date(frontmatter.date)
+    var event2 = new Date()
+
+    if (
+      event.getDate() === event2.getDate() &&
+      event.getMonth() === event2.getMonth() &&
+      event.getFullYear() === event2.getFullYear()
+    ) {
+      console.log('same date!: ', frontmatter.title)
+      // here we can make api calls to facebook and twitter so that the new blog can be shared
+    }
+
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,

@@ -25,7 +25,10 @@ const Generic = props => {
             <span className="image main">
               <img src={pic11} alt="" />
             </span>
-            <p dangerouslySetInnerHTML={{ __html: html }}></p>
+            <p
+              className="content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            ></p>
           </div>
         </section>
       </div>

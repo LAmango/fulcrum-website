@@ -18,6 +18,7 @@ collections:
      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Path", name: "path", default: "{{slug}}", hint: "shoud start with a '/' and something related to the title ex: '/content-managment-system'" }
+      - { label: "Path", name: "path", hint: "shoud start with a '/' and something related to the title ex: '/content-managment-system'" }
+      - { label: "Blog Post Image", name: "image", widget: "image"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
