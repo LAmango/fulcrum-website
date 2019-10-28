@@ -181,12 +181,23 @@
   @include breakpoint(small) {
     article {
       @include padding(3em, 1.5em);
-      height: 16em;
+      height: 100%;
       max-height: none;
       min-height: 0;
 
       h3 {
         font-size: 1.5em;
+      }
+
+      padding: 30px;
+      height: 100%;
+
+      header {
+        p {
+          display: block;
+          font-size: 15px;
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -195,7 +206,7 @@
     display: block;
 
     article {
-      height: 20em;
+      height: 100%;
       width: 100% !important;
     }
   }
