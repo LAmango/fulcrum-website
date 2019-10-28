@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Img from 'gatsby-image'
+
 import { graphql } from 'gatsby'
 
 import pic11 from '../assets/images/pic11.jpg'
@@ -23,7 +25,8 @@ const Generic = props => {
               <h1>{frontmatter.title}</h1>
             </header>
             <span className="image main">
-              <img src={pic11} alt="" />
+              {/*<img src={pic11} alt="" />*/}
+              <Img fluid={frontmatter.image.childImageSharp.fluid} />
             </span>
             <p className="content">{internal.content}</p>
           </div>
@@ -41,6 +44,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       internal {
         content

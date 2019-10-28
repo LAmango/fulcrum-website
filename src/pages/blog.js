@@ -3,11 +3,8 @@ import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Img from 'gatsby-image'
 import BannerBlog from '../components/BannerBlog'
-
-import pic08 from '../assets/images/pic08.jpg'
-import pic09 from '../assets/images/pic09.jpg'
-import pic10 from '../assets/images/pic10.jpg'
 
 const Blog = ({ data }) => (
   <Layout>
@@ -22,14 +19,16 @@ const Blog = ({ data }) => (
       <section id="two" className="spotlights">
         {data.allMarkdownRemark.edges.map(post => (
           <section>
-            <Link to={post.node.frontmatter.path} className="image">
-              <img src={pic08} alt="" />
+            <Link to={post.node.frontmatter.path} className="image image-blog">
+              <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
             </Link>
             <div className="content">
               <div className="inner">
-                <header className="major">
-                  <h3>{post.node.frontmatter.title}</h3>
-                </header>
+                <Link to={post.node.frontmatter.path}>
+                  <header className="major">
+                    <h3>{post.node.frontmatter.title}</h3>
+                  </header>
+                </Link>
                 <p>{post.node.excerpt}</p>
                 <ul className="actions">
                   <li>
@@ -58,6 +57,13 @@ export const pageQuery = graphql`
             date
             path
             title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }

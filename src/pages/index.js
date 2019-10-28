@@ -117,7 +117,7 @@ class HomeIndex extends React.Component {
               <ul className="actions">
                 <li>
                   <Link to="/blog" className="button next">
-                    Get Started
+                    Learn More
                   </Link>
                 </li>
               </ul>

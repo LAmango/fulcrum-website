@@ -8,14 +8,17 @@ var netlifyCmsPaths = {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Forty V2',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
+    title: 'Fulcrum Design and Marketing',
+    author: 'Lucas Albano',
+    description:
+      'A one stop shop for all needs website, marketing and social media',
   },
   plugins: [
     netlifyCmsPaths,
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,10 +42,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/static`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           netlifyCmsPaths,
+          'gatsby-remark-relative-images',
           {
             resolve: `gatsby-remark-images`,
             options: {

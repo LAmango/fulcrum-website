@@ -1,6 +1,7 @@
 ---
 title: The New and Improved
 path: /new-and-improved
+image: /img/doctors.png
 date: 2019-10-05T22:11:05.571Z
 ---
 Yes we talk about websites and how they work. But if you‘re an existing business, maybe you want a fresh look! Google loves when you’re creating new content! 
