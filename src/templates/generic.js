@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 
 import { graphql } from 'gatsby'
 
-import pic11 from '../assets/images/pic11.jpg'
-
 const Generic = props => {
   console.log(props)
   const { markdownRemark } = props.data
@@ -28,7 +26,7 @@ const Generic = props => {
               {/*<img src={pic11} alt="" />*/}
               <Img fluid={frontmatter.image.childImageSharp.fluid} />
             </span>
-            <p className="content">{internal.content}</p>
+            <p>{internal.content}</p>
           </div>
         </section>
       </div>

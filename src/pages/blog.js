@@ -29,7 +29,7 @@ const Blog = ({ data }) => (
                     <h3>{post.node.frontmatter.title}</h3>
                   </header>
                 </Link>
-                <p>{post.node.excerpt}</p>
+                <p className="excerpt">{post.node.excerpt}</p>
                 <ul className="actions">
                   <li>
                     <Link to={post.node.frontmatter.path} className="button">
