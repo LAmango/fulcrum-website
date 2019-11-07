@@ -44,7 +44,7 @@ class HomeIndex extends React.Component {
                   information in an enteratining and attractive way.
                 </p>
               </header>
-              <Link to="/blog" className="link primary"></Link>
+              {/*  <Link to="/blog" className="link primary"></Link>*/}
             </article>
 
             <article style={{ backgroundImage: `url(${pic04})` }}>
@@ -61,7 +61,7 @@ class HomeIndex extends React.Component {
                   your customers a pleasing experience to share with others.
                 </p>
               </header>
-              <Link to="/blog" className="link primary"></Link>
+              {/*<Link to="/blog" className="link primary"></Link>*/}
             </article>
 
             <article style={{ backgroundImage: `url(${pic05})` }}>
@@ -78,7 +78,7 @@ class HomeIndex extends React.Component {
                   interact with us.
                 </p>
               </header>
-              <Link to="/blog" className="link primary"></Link>
+              {/*  <Link to="/blog" className="link primary"></Link>*/}
             </article>
 
             <article style={{ backgroundImage: `url(${pic06})` }}>
@@ -96,7 +96,7 @@ class HomeIndex extends React.Component {
                   consumer. Why not show your confidence while doing it.
                 </p>
               </header>
-              <Link to="/blog" className="link primary"></Link>
+              {/*<Link to="/blog" className="link primary"></Link>*/}
             </article>
           </section>
           <section id="two">

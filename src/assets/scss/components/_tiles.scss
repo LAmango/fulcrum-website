@@ -44,6 +44,8 @@
     }
 
     header {
+      margin-bottom: 0;
+      overflow-y: auto;
       position: relative;
       z-index: 3;
 
@@ -169,12 +171,22 @@
       height: 30vh;
       max-height: 30em;
       min-height: 20em;
+      header {
+        p {
+          text-transform: none;
+        }
+      }
     }
   }
 
   @include breakpoint(medium) {
     article {
       width: 50% !important;
+      header {
+        p {
+          text-transform: none;
+        }
+      }
     }
   }
 
@@ -194,9 +206,10 @@
 
       header {
         p {
-          display: block;
+          display: none;
           font-size: 15px;
           margin-top: 10px;
+          text-transform: none;
         }
       }
     }

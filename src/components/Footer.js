@@ -7,7 +7,7 @@ const Footer = props => (
       <ul className="icons">
         <li>
           <a
-            href="https://twitter.com/AndFulcrum"
+            href="https://twitter.com/Fulcrum_DM"
             className="icon alt fa-twitter"
           >
             <span className="label">Twitter</span>
@@ -21,6 +21,7 @@ const Footer = props => (
             <span className="label">Facebook</span>
           </a>
         </li>
+        {/*
         <li>
           <a href="#" className="icon alt fa-instagram">
             <span className="label">Instagram</span>
@@ -35,7 +36,7 @@ const Footer = props => (
           <a href="#" className="icon alt fa-linkedin">
             <span className="label">LinkedIn</span>
           </a>
-        </li>
+        </li>*/}
       </ul>
       <ul className="copyright">
         <li>&copy; Copyright</li>
