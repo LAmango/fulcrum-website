@@ -6,7 +6,7 @@ date: 2019-11-25T12:32:29.351Z
 ---
 # Budget Platforms
 
-In this weeks blog we will be discussing website platforms. It's been established that you need years of experience and all this background knowledge to create a simple website for your business. The truth is that there's plenty of plug-in applications used to create websites. Wix, Weebly, WordPress, and SquareSpace are all great ways to get started constructing a feel for your website. Using the templates provided, you can customize a plan or replicate an idea you like. If you are a first time business owner or you've started a side business, simple websites are a great form of passive advertising. 
+We trust everyone had a great holiday and stuffed like a turkey! In this weeks blog we will be discussing website platforms. It's been established that you need years of experience and all this background knowledge to create a simple website for your business. The truth is that there's plenty of plug-in applications used to create websites. Wix, Weebly, WordPress, and SquareSpace are all great ways to get started constructing a feel for your website. Using the templates provided, you can customize a plan or replicate an idea you like. If you are a first time business owner or you've started a side business, simple websites are a great form of passive advertising. 
 
 # Plan Your Website-Ask Questions
 
