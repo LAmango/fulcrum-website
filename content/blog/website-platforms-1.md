@@ -2,7 +2,7 @@
 title: 'Website Platforms '
 path: 'Website-Platforms '
 image: /img/platform-2.jpg
-date: 2019-11-25T12:32:29.351Z
+date: 2019-12-10T11:00:00.000Z
 ---
 # Budget Platforms
 
@@ -20,4 +20,4 @@ In this weeks blog we will be discussing website platforms. It's been establishe
 
 Here at Fulcrum Design and Marketing, we want to find the best solutions that fit your budget and your vision. We always recommend you research how involved you want to be with your website. Fulcrum offers a custom website service which can be difficult to reproduce in a platform like Wix. For example, if you have customers or clients who need specific login credentials then you might need code written to authenticate information. There are certain requirements a website needs to accept payments. SSL Certificates recognize secure sites and automatically connects them with the secure server. We have used Wix and other platforms in the past to show customers an idea of what they might want in their website. Ask us how we can help you get started with a free template! Fulcrum Design and Marketing hopes this information has been useful to you. We are always available to answer question on coding and the development of your business. 
 
-\#fulcrumwebsites #fdmblog
+\#fulcrumwebsites #fdmblog #fulcrumdm
