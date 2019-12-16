@@ -1,6 +1,6 @@
 ---
-title: 'Website Platforms '
-path: '/Website-Platforms '
+title: Website Platforms
+path: /Website-Platforms
 image: /img/platform-2.jpg
 date: 2019-12-10T11:00:00.000Z
 ---

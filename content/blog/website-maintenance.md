@@ -1,5 +1,5 @@
 ---
-title: 'Website Maintenance '
+title: Website Maintenance
 path: /Website-Maintenance
 image: /img/screen-shot-2019-11-07-at-12.39.21-pm.png
 date: 2019-11-08T13:00:00.000Z
