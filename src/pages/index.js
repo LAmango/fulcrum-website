@@ -52,13 +52,14 @@ class HomeIndex extends React.Component {
                 <h3>Design</h3>
                 <p>
                   The age of boutique website design is here! You can now flood
-                  your audience with eye-catching sensations, give them a reason
-                  to stay longer on you webpage.
+                  your audience with eye-catching sensations, giving them a
+                  reason to stay longer on your webpage.
                 </p>
                 <p>
-                  We can customize our layouts to attract your audience,
-                  implement the message your business wants to showcase and give
-                  your customers a pleasing experience to share with others.
+                  We can customize our layouts to attract your audience. Then,
+                  after careful considerations, we implement the message your
+                  business wants to showcase and give your customers a pleasing
+                  experience to share with others.
                 </p>
               </header>
               {/*<Link to="/blog" className="link primary"></Link>*/}
@@ -68,9 +69,9 @@ class HomeIndex extends React.Component {
               <header className="major">
                 <h3>Develop</h3>
                 <p>
-                  As a website developer, we want to simplify the process of
+                  As website developers, we want to simplify the process of
                   creating and managing your customer relations. Websites can
-                  increase eCommerce and improve your CRM.
+                  increase eCommerce and improve customer satisfaction.
                 </p>
                 <p>
                   If you have a website, we can provide Content Management
@@ -93,7 +94,7 @@ class HomeIndex extends React.Component {
                 <p>
                   Your website is essential in creating more opportunities for
                   leads. As a business, your job is to solve problems for the
-                  consumer. Why not show your confidence while doing it.
+                  consumer.
                 </p>
               </header>
               {/*<Link to="/blog" className="link primary"></Link>*/}
