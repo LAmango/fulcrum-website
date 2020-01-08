@@ -8,7 +8,7 @@ import { graphql } from 'gatsby'
 const Generic = props => {
   console.log(props)
   const { markdownRemark } = props.data
-  const { frontmatter, internal } = markdownRemark
+  const { frontmatter, internal, html } = markdownRemark
   return (
     <Layout>
       <Helmet>
@@ -26,7 +26,8 @@ const Generic = props => {
               {/*<img src={pic11} alt="" />*/}
               <Img fluid={frontmatter.image.childImageSharp.fluid} />
             </span>
-            <p>{internal.content}</p>
+            {/*<p>{internal.content}</p>*/}
+            <div dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </section>
       </div>
@@ -38,6 +39,7 @@ export default Generic
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
