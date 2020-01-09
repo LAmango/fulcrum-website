@@ -2,7 +2,7 @@ var netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
     cmsConfig: `/static/admin/config.yml`,
-    enableIdentityWidget: false,
+    enableIdentityWidget: true,
   },
 }
 
@@ -15,7 +15,12 @@ module.exports = {
   },
   plugins: [
     netlifyCmsPaths,
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -33,7 +38,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-eslint',
+    //'gatsby-plugin-eslint',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
