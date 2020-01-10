@@ -14,11 +14,12 @@ module.exports = {
       'A one stop shop for all needs website, marketing and social media',
   },
   plugins: [
+    'gatsby-plugin-sass',
     netlifyCmsPaths,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        modulePath: `${__dirname}/src/cms/cms.js`
       },
     },
     'gatsby-plugin-react-helmet',
@@ -36,7 +37,6 @@ module.exports = {
         icon: 'src/assets/images/fulcrum_logo_final.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     //'gatsby-plugin-eslint',
     {
@@ -68,5 +68,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-netlify"
   ],
 }
