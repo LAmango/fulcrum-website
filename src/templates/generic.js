@@ -22,13 +22,10 @@ export const BlogPostTemplate = ({content, title, image}) => {
               <h1>{title}</h1>
             </header>
             <span className="image main">
-                {image.childImageSharp ? (
+                {!!image.childImageSharp ? (
                   <Img fluid={image.childImageSharp.fluid} />
                 ) : (
-                  <div
-                    style={{backgroundImage: `url(${image})`}}
-                  >
-                  </div>
+                  <img src={image} alt="blog post image"/>
                 )}
               </span>
             <div dangerouslySetInnerHTML={{ __html: content }} />
