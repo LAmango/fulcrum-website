@@ -22,10 +22,11 @@ export const BlogPostTemplate = ({content, title, image}) => {
               <h1>{title}</h1>
             </header>
             <span className="image main">
-                {!!image.childImageSharp ? (
+                {!image.childImageSharp ? (
                   <Img fluid={image.childImageSharp.fluid} />
                 ) : (
-                  <img src={image} alt="blog post image"/>
+                  //<img src={image.toStr} alt="blog post image"/>
+                  <div>{image.toString()}</div>
                 )}
               </span>
             <div dangerouslySetInnerHTML={{ __html: content }} />
