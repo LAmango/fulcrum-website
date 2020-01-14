@@ -6,16 +6,13 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 
-editor:
-    preview: true
-
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
     editor:
-     preview: false
+     preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Path", name: "path", hint: "shoud start with a '/' and something related to the title ex: '/content-managment-system'" }
