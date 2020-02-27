@@ -1,15 +1,16 @@
 import auth0 from "auth0-js"
 import { navigate } from "gatsby"
-require('dotenv').config();
 
 const isBrowser = typeof window !== "undefined"
+
+console.log(process.env);
 
 // eslint-disable-next-line no-unused-vars
 const auth = isBrowser
   ? new auth0.WebAuth({
-    domain: process.env.AUTH0_DOMAIN,
-    clientID: process.env.AUTH0_CLIENTID,
-    redirectUri: process.env.AUTH0_CALLBACK,
+    domain: process.env.AUTH0_DOMAIN || process.env.GATSBY_AUTH0_DOMAIN,
+    clientID: process.env.AUTH0_CLIENTID || process.env.GATSBY_AUTH0_CLIENTID,
+    redirectUri: process.env.AUTH0_CALLBACK || process.env.GATSBY_AUTH0_CALLBACK,
     responseType: "token id_token",
     scope: "openid profile email",
   })
