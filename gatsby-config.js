@@ -2,7 +2,7 @@ var netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
     cmsConfig: `/static/admin/config.yml`,
-    enableIdentityWidget: true,
+    enableIdentityWidget: false,
   },
 }
 
@@ -19,7 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        enableIdentityWidget: true,
       },
     },
     'gatsby-plugin-react-helmet',
