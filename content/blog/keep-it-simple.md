@@ -1,6 +1,6 @@
 ---
 title: Keep it Simple!
-path: /keep-it-simple
+path: /FulcrumDesign
 image: /img/website.png
 date: 2019-10-05T22:11:05.571Z
 ---
