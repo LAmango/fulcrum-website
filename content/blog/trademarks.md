@@ -5,7 +5,7 @@ image: >-
   /img/copyrighted-material-intellectual-property-copyright-878429678-5c5f33bcc9e77c000159c456.jpg
 date: 2020-02-28T20:17:48.012Z
 ---
-# **What are Trademarks and Copyrights!**
+# **What are Trademarks?**
 
 Fulcrum Design and Marketing has been hard at work creating another website! We were recently asked about trademarks and if they're necessary for your business. Trademarks consist of any text, design, phrase, or symbol that explicitly identifies your business, which can be protected under trademark laws. While you do not technically need to register an active trademark, you may only be protected within your local area. 
 
