@@ -1,6 +1,6 @@
 ---
 title: The New and Improved
-path: /new-and-improved
+path: '/FulcrumDevelopment '
 image: /img/doctors.png
 date: 2019-10-05T22:11:05.571Z
 ---
