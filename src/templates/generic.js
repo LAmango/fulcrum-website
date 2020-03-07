@@ -4,10 +4,9 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 
 import { graphql } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
 
-export const BlogPostTemplate = ({content, title, image}) => {
-  // eslint-disable-next-line no-undef
-  console.log(title, image);
+export const BlogPostTemplate = ({content, title, image, bodyIsMarkdown}) => {
   return (
     <Layout>
       <Helmet>
@@ -28,7 +27,9 @@ export const BlogPostTemplate = ({content, title, image}) => {
                   <img src={image} alt="blog post image"/>
                 )}
               </span>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            {bodyIsMarkdown ?
+              <ReactMarkdown source={content}/> :
+            <div dangerouslySetInnerHTML={{ __html: content }} />}
           </div>
         </section>
       </div>
@@ -51,12 +52,11 @@ const Generic = props => {
 export default Generic
 
 export const pageQuery = graphql`
-    query($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path } }) {
+    query($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
-                path
                 title
                 image {
                     childImageSharp {

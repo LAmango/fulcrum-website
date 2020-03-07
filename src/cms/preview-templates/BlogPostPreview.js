@@ -9,22 +9,27 @@ class BlogPostPreview extends React.Component {
       image: null
     }
   }
+
+  _getImage = async image => {
+    const value = await this.props.getAsset(image);
+    this.setState({image: value.toString()})
+  }
+
   componentDidMount() {
     const image = this.props.entry.getIn(['data', 'image'])
     if(image) {
-      this.props.getAsset(image).then(value => {
-        this.setState({image: value.toString()})
-      })
+      //this._getImage(image);
     }
   }
 
   render(){
-    const { entry, widgetFor } = this.props;
+    const { entry } = this.props;
     return (
       <BlogPostTemplate
-        image={this.state.image}
-        content={widgetFor('body')}
+        image={this.props.getAsset(this.props.entry.getIn(['data', 'image']))}
+        content={entry.getIn(['data', 'body'])}
         title={entry.getIn(['data', 'title'])}
+        bodyIsMarkdown
       />
     )
 

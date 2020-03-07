@@ -3,8 +3,6 @@ import { navigate } from "gatsby"
 
 const isBrowser = typeof window !== "undefined"
 
-console.log(process.env);
-
 // eslint-disable-next-line no-unused-vars
 const auth = isBrowser
   ? new auth0.WebAuth({
