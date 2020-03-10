@@ -43,6 +43,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `clients`,
+        path: `${__dirname}/content/clients`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `img`,
         path: `${__dirname}/static`,
       },
@@ -66,6 +73,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+        htmlFavicon: 'src/assets/images/fulcrum_logo_final.png',
         enableIdentityWidget: true,
       },
     },

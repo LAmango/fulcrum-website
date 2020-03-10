@@ -1,5 +1,6 @@
 ---
 title: Copyrights & Trademarks
+key: blog-post
 image: >-
   /img/copyrighted-material-intellectual-property-copyright-878429678-5c5f33bcc9e77c000159c456.jpg
 date: 2020-02-28T20:17:48.012Z

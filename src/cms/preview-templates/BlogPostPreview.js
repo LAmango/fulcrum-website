@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BlogPostTemplate } from '../../templates/generic';
+import { BlogPostTemplate } from '../../templates/blog-post';
 
 class BlogPostPreview extends React.Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 ---
 title: What Google Likes!
+key: blog-post
 image: >-
   /img/cover-photo-how-bert-affects-seo-and-how-you-can-optimize-for-it-1024x768.jpg
 date: 2019-10-09T00:36:57.699Z

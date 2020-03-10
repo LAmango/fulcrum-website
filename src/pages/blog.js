@@ -4,16 +4,16 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-import BannerBlog from '../components/BannerBlog'
+import Banner from '../components/Banner'
 
 const Blog = ({ data }) => (
   <Layout>
     <Helmet>
-      <title>Fulcrum Blog</title>
-      <meta name="Fulcrum Blog" content="Blog Page" />
+      <title>Fulcrum | Blog</title>
+      <meta name="Fulcrum | Blog" content="Blog Page" />
     </Helmet>
 
-    <BannerBlog />
+    <Banner style="style2" title={"Blog"} subTitle={"We are always learning new topics, frameworks and concepts. <br/> So here we will be diving deep into what we're learning!"}/>
 
     <div id="main">
       <section id="two" className="spotlights">
@@ -50,7 +50,7 @@ export default Blog
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: { key: { eq: "blog-post" } }}) {
       edges {
         node {
             fields {

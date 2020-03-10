@@ -37,7 +37,7 @@ export const BlogPostTemplate = ({content, title, image, bodyIsMarkdown}) => {
   )
 }
 
-const Generic = props => {
+const BlogPost = props => {
   const { markdownRemark } = props.data;
   const { frontmatter, html } = markdownRemark;
   console.log("gen: ", frontmatter.image)
@@ -49,7 +49,7 @@ const Generic = props => {
     />
   )
 }
-export default Generic
+export default BlogPost
 
 export const pageQuery = graphql`
     query($slug: String!) {
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
                 title
                 image {
                     childImageSharp {
-                        fluid(maxWidth: 600) {
+                        fluid(maxWidth: 2000) {
                             ...GatsbyImageSharpFluid
                         }
                     }

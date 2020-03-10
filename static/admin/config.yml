@@ -17,7 +17,27 @@ collections:
     editor:
      preview: true
     fields:
+      - { label: "Key", name: "key", widget: "hidden", default: "blog-post"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Blog Post Image", name: "image", widget: "image"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "clients"
+    label: "Client"
+    folder: "content/clients"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: company
+    editor:
+      preview: true
+    fields:
+      - { label: "Key", name: "key", widget: "hidden", default: "client-page"}
+      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Main Image", name: "mainImage", widget: "image" }
+      - { label: "What We Did", name: "body", widget: "markdown" }
+      #- label: "Gallery"
+      #  name: "gallery"
+      #  widget: "list"
+      #  fields:
+      #    - { label: "Image", name: "image", widget: "image" }
+      #    - { label: "Image Alt", name: "alt", widget: "string", hint: "It is important for images to have some form of title for better SEO" }
