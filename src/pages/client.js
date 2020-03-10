@@ -16,7 +16,7 @@ const Client = ({data}) => {
 
       <Banner
         style="style4"
-        title={"Client"}
+        title={"Clients"}
         subTitle={"Here are some clients we've made websites for!"}
       />
 
@@ -24,7 +24,7 @@ const Client = ({data}) => {
           <section id="two" className="content">
             <div className="grid-wrapper">
               {edges.map((client, index) => (
-                <div key={index} className="col-4 col-6 clientBox">
+                <div key={index} className="col-6 clientBox">
                   <Img
                     fluid={client.node.frontmatter.mainImage.childImageSharp.fluid}
                     alt={client.node.frontmatter.mainImage.alt}

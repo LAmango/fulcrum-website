@@ -20,6 +20,10 @@
 }
 
 @media screen and (max-width: 550px) {
+  .clientBox {
+    margin: auto;
+    padding: 20px 0;
+  }
   .sm-button {
     font-size: xx-small !important;
   }
