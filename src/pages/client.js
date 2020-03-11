@@ -60,6 +60,15 @@ export const pageQuery = graphql`
                             }
                         }
                         company
+                    }
+                    
+                }
+            }
+        }
+    }
+`
+/*
+
                         gallery {
                             alt
                             image {
@@ -70,10 +79,4 @@ export const pageQuery = graphql`
                                 }
                             }
                         }
-                    }
-                    
-                }
-            }
-        }
-    }
-`
+ */
