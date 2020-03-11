@@ -7,6 +7,16 @@ TLHA Enterprises Inc asked us to design and build a user friendly website, allow
 
 # Features
 
+* Mobile and desktop friendly
+* Social Media Extensions 
+* Company Blog
+* Content Management System 
+* Contact Center
+* Website Navigation
+* Document Folders
+* Client Portal
+* Visuals  
 
+[Check out TLHA Enterprises Inc.](https://www.tlhaenterprises.com/)
 
 #
