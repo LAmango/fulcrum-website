@@ -1,0 +1,1 @@
+{"type":"PR","pr":{"number":34,"head":"c362ae675e18d4786f4e7155ab01017fe12e58ff"},"user":"lucas","status":"draft","branch":"cms/test-blog","collection":"blog","title":"Test Blog","description":"No Description!","objects":{"entry":{"path":"content/blog/test-blog.md","sha":"ac64b13ea8273d1cc7c05dec47e8b7da28d0323a"},"files":[]},"timeStamp":"2020-04-06T21:33:44.793Z"}
