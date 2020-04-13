@@ -1,6 +1,6 @@
 ---
 key: blog-post
-title: Marketing Tips
+title: 'Marketing Tips: Customer Focus'
 image: /img/1_fj0inrntmit0rddb_ux0sq.jpg
 date: 2020-04-06T21:19:12.077Z
 ---
