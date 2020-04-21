@@ -17,10 +17,12 @@ We're back with some marketing tips!! We'll be discussing your Website design an
 * Simple layout
 * Don't be afraid of white space
 
-We use specific coding and designs for our website content to make sure it's top tier. Some people like to use sites like Wix, Weebly, Strikingly, etc. That comes with some risks though. For an example
+We use specific coding and designs for our website content to make sure it's top tier. Some people like to use sites like Wix, Weebly, Strikingly, etc. That comes with some risks though. For an example:
 
 * Slow performance
 * Normally just a "free" trial
 * Data privacy
 * Ads
 * Unprofessional website address
+
+If you guys need any professional help with creating a website or need more tips, feel free to contact us! We are here to help everyone. <https://www.facebook.com/fulcrumdm>
