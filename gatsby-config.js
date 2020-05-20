@@ -8,7 +8,7 @@ var netlifyCmsPaths = {
 
 module.exports = {
   siteMetadata: {
-    title: 'Fulcrum Design and Marketing',
+    title: 'Fulcrum Websites and Marketing',
     author: 'Lucas Albano',
     description:
       'A one stop shop for all needs website, marketing and social media',
