@@ -1,7 +1,7 @@
 ---
 key: blog-post
 title: Project Management Systems
-image: /img/screen-shot-2020-05-24-at-6.15.17-pm.png
+image: /img/fulcrum-websites-and-marketing.png
 date: 2020-05-24T20:32:16.648Z
 ---
 # Welcome back to our #FulcrumBlogs! 
