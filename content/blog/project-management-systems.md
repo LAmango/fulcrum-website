@@ -20,7 +20,9 @@ In order for a project manager to achieve their goals in the organization, they 
 
 Example: Fulcrum Websites and Marketing needed a better way to communicate goals and progress with it's team. We wanted a project management system our team is familiar with. By creating Fulcrum Portals, we can saves time in the review process. The custom project management system we created allows us to upload the website into Fulcrum Portals viewable in mobile, desktop, and tablet form. Before completing the website our team reviews the UX Design, functionality, and content. Fulcrum Portals allows feedback from not only the team, but also the website customer. We focus in on this feature because we want our customers to be involved. 
 
+```
 Please click the link to view how our Fulcrum Portal Works!
+```
 
 ## What are the features of Fulcrum Portals?
 
