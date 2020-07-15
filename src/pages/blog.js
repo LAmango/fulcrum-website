@@ -19,12 +19,12 @@ const Blog = ({ data }) => (
       <section id="two" className="spotlights">
         {data.allMarkdownRemark.edges.map(post => (
           <section>
-            <Link to={`blog${post.node.fields.slug}`} className="image image-blog">
+            <Link to={`${post.node.fields.slug}`} className="image image-blog">
               <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
             </Link>
             <div className="content">
               <div className="inner">
-                <Link to={`blog${post.node.fields.slug}`}>
+                <Link to={`${post.node.fields.slug}`}>
                   <header className="major">
                     <h3>{post.node.frontmatter.title}</h3>
                   </header>
@@ -32,7 +32,7 @@ const Blog = ({ data }) => (
                 <p className="excerpt">{post.node.excerpt}</p>
                 <ul className="actions">
                   <li>
-                    <Link to={`blog${post.node.fields.slug}`} className="button">
+                    <Link to={`${post.node.fields.slug}`} className="button">
                       Learn more
                     </Link>
                   </li>

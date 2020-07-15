@@ -29,7 +29,7 @@ const Client = ({data}) => {
                     fluid={client.node.frontmatter.mainImage.childImageSharp.fluid}
                     alt={client.node.frontmatter.mainImage.alt}
                   />
-                    <Link to={`client${client.node.fields.slug}`} className="clientName button fit small sm-button">
+                    <Link to={`${client.node.fields.slug}`} className="clientName button fit small sm-button">
                       {client.node.frontmatter.company}
                     </Link>
                 </div>

@@ -1,3 +1,4 @@
+/*
 import auth0 from "auth0-js"
 import { navigate } from "gatsby"
 
@@ -79,3 +80,4 @@ export const logout = () => {
     localStorage.setItem("isLoggedIn", false)
     auth.logout()
 }
+ */

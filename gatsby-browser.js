@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 // ./gatsby-browser.js
+/*
 import React from "react"
 import { silentAuth } from "./src/utils/auth"
 
@@ -37,3 +38,5 @@ class SessionCheck extends React.Component {
 export const wrapRootElement = ({ element }) => {
   return <SessionCheck>{element}</SessionCheck>
 }
+
+ */
