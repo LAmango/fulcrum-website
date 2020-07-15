@@ -1,4 +1,5 @@
 // src/pages/account.js
+/*
 import React from "react"
 import { Router } from "@reach/router"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
@@ -44,3 +45,5 @@ const Account = () => {
 }
 
 export default Account
+
+ */
