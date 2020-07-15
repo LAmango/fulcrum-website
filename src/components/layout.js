@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql, StaticQuery } from 'gatsby'
 
 import '../assets/scss/main.scss'
 import Header from './Header'
@@ -39,19 +40,30 @@ class Layout extends React.Component {
     const { children } = this.props
 
     return (
-      <div
-        className={`body ${this.state.loading} ${
-          this.state.isMenuVisible ? 'is-menu-visible' : ''
-        }`}
-      >
-        <div id="wrapper">
-          <Header onToggleMenu={this.handleToggleMenu} />
-          {children}
-          <Contact />
-          <Footer />
+      <StaticQuery query={graphql`
+            query {
+                site {
+                    siteMetadata {
+                        title
+                    }
+                }
+            }
+        `} render={data => (
+        <div
+          className={`body ${this.state.loading} ${
+            this.state.isMenuVisible ? 'is-menu-visible' : ''
+          }`}
+        >
+          <div id="wrapper">
+            <Header onToggleMenu={this.handleToggleMenu} title={data.site.siteMetadata.title}/>
+            {children}
+            <Contact />
+            <Footer />
+          </div>
+          <Menu onToggleMenu={this.handleToggleMenu} />
         </div>
-        <Menu onToggleMenu={this.handleToggleMenu} />
-      </div>
+      )}
+      />
     )
   }
 }

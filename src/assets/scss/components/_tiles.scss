@@ -45,7 +45,6 @@
 
     header {
       margin-bottom: 0;
-      overflow-y: auto;
       position: relative;
       z-index: 3;
 
@@ -183,6 +182,7 @@
     article {
       width: 50% !important;
       header {
+        overflow: auto;
         p {
           text-transform: none;
         }

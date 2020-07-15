@@ -8,14 +8,14 @@ var netlifyCmsPaths = {
 
 module.exports = {
   siteMetadata: {
-    title: 'Fulcrum Design and Marketing',
+    title: 'Fulcrum Websites and Marketing',
     author: 'Lucas Albano',
     description:
       'A one stop shop for all needs website, marketing and social media',
   },
   plugins: [
+    'gatsby-plugin-sass',
     netlifyCmsPaths,
-    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -31,14 +31,20 @@ module.exports = {
         icon: 'src/assets/images/fulcrum_logo_final.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-eslint',
+    //'gatsby-plugin-eslint',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `clients`,
+        path: `${__dirname}/content/clients`,
       },
     },
     {
@@ -63,5 +69,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        htmlFavicon: 'src/assets/images/fulcrum_logo_final.png',
+        enableIdentityWidget: true,
+      },
+    },
+    "gatsby-plugin-netlify"
   ],
 }

@@ -1,0 +1,31 @@
+/* Client Box */
+
+.clientBox {
+  position: relative;
+  width: 80%;
+  margin: 20px;
+  > div{
+    > img {
+      width: 80% !important
+    }
+  }
+}
+
+.clientName {
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  right: -30px;
+  background-color: _palette(bg);
+}
+
+@media screen and (max-width: 550px) {
+  .clientBox {
+    margin: auto;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .sm-button {
+    font-size: xx-small !important;
+  }
+}

@@ -7,60 +7,70 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.onCreateNode = ({ node }) => {
-  fmImagesToRelative(node)
-}
-
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/generic.js`)
-  const result = await graphql(`
-    {
-      allMarkdownRemark(
+
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
-              date
-              title
+        limit: 1000) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                key
+              }
             }
           }
         }
       }
-    }
-  `)
-  // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const { id, frontmatter, internal } = node
-
-    var event = new Date(frontmatter.date)
-    var event2 = new Date()
-
-    if (
-      event.getDate() === event2.getDate() &&
-      event.getMonth() === event2.getMonth() &&
-      event.getFullYear() === event2.getFullYear()
-    ) {
-      console.log('same date!: ', frontmatter.title)
-      // here we can make api calls to facebook and twitter so that the new blog can be shared
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
     }
 
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {
-        id,
-        frontmatter,
-        internal,
-      }, // additional data can be passed via context
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      const pathStart = post.node.frontmatter.key.split("-")[0];
+
+      createPage({
+        path: `${pathStart}${post.node.fields.slug}`,
+        component: path.resolve(`src/templates/${String(post.node.frontmatter.key)}.js`),
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
     })
+
+    return null
   })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  fmImagesToRelative(node)
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

@@ -4,27 +4,27 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-import BannerBlog from '../components/BannerBlog'
+import Banner from '../components/Banner'
 
 const Blog = ({ data }) => (
   <Layout>
     <Helmet>
-      <title>Fulcrum Blog</title>
-      <meta name="Fulcrum Blog" content="Blog Page" />
+      <title>Fulcrum | Blog</title>
+      <meta name="Fulcrum | Blog" content="Blog Page" />
     </Helmet>
 
-    <BannerBlog />
+    <Banner style="style2" title={"Blog"} subTitle={"We are always learning new topics, frameworks and concepts. <br/> So here we will be diving deep into what we're learning!"}/>
 
     <div id="main">
       <section id="two" className="spotlights">
         {data.allMarkdownRemark.edges.map(post => (
           <section>
-            <Link to={post.node.frontmatter.path} className="image image-blog">
+            <Link to={`blog${post.node.fields.slug}`} className="image image-blog">
               <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
             </Link>
             <div className="content">
               <div className="inner">
-                <Link to={post.node.frontmatter.path}>
+                <Link to={`blog${post.node.fields.slug}`}>
                   <header className="major">
                     <h3>{post.node.frontmatter.title}</h3>
                   </header>
@@ -32,7 +32,7 @@ const Blog = ({ data }) => (
                 <p className="excerpt">{post.node.excerpt}</p>
                 <ul className="actions">
                   <li>
-                    <Link to={post.node.frontmatter.path} className="button">
+                    <Link to={`blog${post.node.fields.slug}`} className="button">
                       Learn more
                     </Link>
                   </li>
@@ -50,12 +50,14 @@ export default Blog
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: { key: { eq: "blog-post" } }}) {
       edges {
         node {
+            fields {
+                slug
+            }
           frontmatter {
             date
-            path
             title
             image {
               childImageSharp {
