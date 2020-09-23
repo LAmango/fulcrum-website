@@ -8,3 +8,9 @@ The Skin Room Naples is Florida’s premier destination for medical-grade skin t
 How did we do it? 
 
 All projects start with a consultation to review project goals and objectives. The first phase is important to gather design cues and learn about the client. Erica had a vision for this project and provided other websites she liked. This helped us construct an outline, explaining how each page is navigated and what features each page includes.
+
+Visit their website for more information! 
+
+<https://www.theskinroom.com/>
+
+\#fulcrumwebsites
