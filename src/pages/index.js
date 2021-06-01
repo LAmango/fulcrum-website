@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
@@ -8,9 +8,12 @@ import pic04 from '../assets/images/pic04.jpg'
 import pic05 from '../assets/images/pic05.jpg'
 import pic06 from '../assets/images/pic06.jpg'
 import HomeBanner from '../components/HomeBanner'
+import Packages from '../components/packages'
 
 class HomeIndex extends React.Component {
   render() {
+    const packages = this.props.data.packages.edges.map(edge => edge.node.frontmatter);
+    packages.sort((a,b) => (a.order > b.order) ? 1 : -1);
     return (
       <Layout>
         <Helmet
@@ -27,7 +30,7 @@ class HomeIndex extends React.Component {
                 'website, design, marketing, simple, fast, web development',
             },
           ]}
-        ></Helmet>
+        />
 
         <HomeBanner />
         <div id="main">
@@ -124,6 +127,7 @@ class HomeIndex extends React.Component {
               </ul>
             </div>
           </section>
+          <Packages packages={packages}/>
         </div>
       </Layout>
     )
@@ -131,3 +135,23 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex
+
+export const pageQuery = graphql`
+    query {
+        packages: allMarkdownRemark(filter: {frontmatter: { key: { eq: "package" } }}) {
+            edges {
+                node {
+                    frontmatter {
+                        name
+                        price
+                        note
+                        order
+                        options {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+`

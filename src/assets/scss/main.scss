@@ -45,6 +45,27 @@
   }
 }
 
+.group {
+  display: flex;
+  justify-content: space-evenly;
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+}
+
+.package {
+  @include breakpoint(small) {
+    flex: auto;
+  }
+}
+
+.packages {
+  @include breakpoint(small) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 // Base.
 
 @import 'base/page';

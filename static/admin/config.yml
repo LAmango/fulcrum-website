@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-local_backend: false
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -35,6 +35,25 @@ collections:
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Main Image", name: "mainImage", widget: "image" }
       - { label: "What We Did", name: "body", widget: "markdown" }
+  - name: "packages"
+    label: "Packages"
+    folder: "content/packages"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    editor:
+      preview: true
+    fields:
+      - { label: "Key", name: "key", widget: "hidden", default: "package"}
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Note", name: "note", widget: "string", required: false }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "order", name: "order", widget: "hidden" }
+      - label: "Options"
+        name: "options"
+        widget: "list"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
       #- label: "Gallery"
       #  name: "gallery"
       #  widget: "list"

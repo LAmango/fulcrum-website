@@ -44,17 +44,20 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
-      const pathStart = post.node.frontmatter.key.split("-")[0];
+      if (post.node.frontmatter.key !== "package") {
+        const pathStart = post.node.frontmatter.key.split("-")[0];
 
-      createPage({
-        path: `${post.node.fields.slug}`,
-        component: path.resolve(`src/templates/${String(post.node.frontmatter.key)}.js`),
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
+        createPage({
+          path: `${post.node.fields.slug}`,
+          component: path.resolve(`src/templates/${String(post.node.frontmatter.key)}.js`),
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        })
+      }
+
     })
 
     return null
