@@ -1,7 +1,7 @@
 ---
 key: package
 price: 190
-note: '$190 per month ( Discounted: $2,100 Per Year)'
+note: '$190 per month (Discounted: $2,100 Per Year)'
 name: Fulcrum Plan
 order: 2
 options:
