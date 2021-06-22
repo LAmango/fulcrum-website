@@ -1,6 +1,7 @@
 ---
 key: package
 price: 150
+note: '$150 Per Month (Discounted: $1,600 Per Year)'
 name: Premium Plan
 order: 1
 options:
@@ -16,3 +17,4 @@ options:
   - name: SEO Optimization for 2 Keywords/Phrases
   - name: 1 SEO Friendly Blog Post Per Month (Additional is billed at $50 per post)
 ---
+
