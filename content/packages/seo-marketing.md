@@ -11,6 +11,7 @@ options:
   - name: 'Google Analytics Installation '
   - name: Content Copywriter
   - name: Meta Tag Updates
+  - name: Keyword Optimization
   - name: 'Visitor Tracking & Reporting '
 ---
 
