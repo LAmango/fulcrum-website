@@ -1,7 +1,7 @@
 ---
 key: package
-price: 399
-note: 'Starts at $399.99/ Month '
+price: 99
+note: 'Starts at $99.99/ Month '
 name: SOCIAL MEDIA PACKAGE
 options:
   - name: 'Profile/Page Optimization '
