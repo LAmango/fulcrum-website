@@ -1,7 +1,7 @@
 ---
 key: package
-price: 199
-note: Starts at $199/ Month
+price: 399
+note: Starts at $399/ Month
 name: PAY-PER-CLICK PACKAGE
 options:
   - name: 'Keyword Research '
