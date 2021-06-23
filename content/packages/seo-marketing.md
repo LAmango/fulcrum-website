@@ -1,8 +1,8 @@
 ---
 key: package
 price: 299
-note: Starts at 299.99/ Month
-name: SEO MARKETING
+note: Starts at $299.99/ Month
+name: SEO MARKETING PACKAGE
 options:
   - name: 'In-depth Website Analysis '
   - name: 'Competitor Analysis '
