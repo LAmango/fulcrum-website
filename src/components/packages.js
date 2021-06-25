@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 
 const Packages = ({packages}) => {
   const [tab, setTab] = React.useState(packages[0].name);
-  const [tabContent, setTabContent] = React.useState(packages[0].options);
+  const [tabContent, setTabContent] = React.useState(packages[0]);
 
   React.useEffect(() => {
-
+    setTabContent(packages.filter(pack => pack.name === tab)[0])
   }, tab)
 
   return (
@@ -20,7 +20,7 @@ const Packages = ({packages}) => {
         <div className="col-4 packages">
           {packages.map(pack => (
             <div key={pack.name}>
-              <div className="mb-5 package">
+              <div className="mb-1 package">
                 <input
                   type="radio"
                   id={pack.name}
@@ -33,12 +33,13 @@ const Packages = ({packages}) => {
             </div>
           ))}
         </div>
-        <div className="col-8">
-          <ul>
-            {packages.filter(pack => pack.name === tab)[0].options.map(option => (
+        <div className="package-content">
+          <ul style={{marginBottom: 12}}>
+            {tabContent.options.map(option => (
               <li key={option.name}>{option.name}</li>
             ))}
           </ul>
+          <span style={{fontSize: 25, }}>${tabContent.price}</span><span>/month</span>
         </div>
       </div>
     </div>

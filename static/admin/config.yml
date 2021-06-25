@@ -48,7 +48,7 @@ collections:
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Note", name: "note", widget: "string", required: false }
       - { label: "Name", name: "name", widget: "string" }
-      - { label: "order", name: "order", widget: "hidden" }
+      - { label: "order", name: "order", widget: "number" }
       - label: "Options"
         name: "options"
         widget: "list"

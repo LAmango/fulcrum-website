@@ -47,23 +47,31 @@
 
 .group {
   display: flex;
-  justify-content: space-evenly;
-  @include breakpoint(small) {
+  justify-content: flex-start;
+  @include breakpoint(small){
     flex-direction: column;
+  }
+}
+
+.packages {
+    display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+  @include breakpoint(small) {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
 .package {
   @include breakpoint(small) {
     flex: auto;
+    white-space: nowrap;
   }
 }
 
-.packages {
-  @include breakpoint(small) {
-    display: flex;
-    justify-content: space-between;
-  }
+.package-content {
+  width: fit-content;
 }
 
 // Base.
